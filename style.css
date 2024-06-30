@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  background: black;
+
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+}
+
+nav .navBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.2rem;
+}
+
+nav img {
+  height: 1.5rem;
+}
+
+nav .iconBox {
+  width: 15%;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.bar {
+  width: 100%;
+  display: flex;
+  color: white;
+  margin: 0.5rem 0;
+  margin-top: 3rem;
+}
+
+.bar p {
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.4rem;
+  background: #2A2A2B;
+  border-radius: 10px;
+
+}
+
+.contentCon {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  color: white;
+}
+
+.contentCon .videoBox {
+  display: flex;
+  width: 99%;
+  height: 7rem;
+  background-color: #18181A;
+  border-radius: 1rem;
+  margin: 0.8rem;
+  padding: 0.2rem;
+}
+
+.contentCon .videoBox:last-child {
+  margin-bottom: 10rem;
+
+}
+
+.contentCon .videoBox img {
+  height: 100%;
+}
+
+.contentCon .infoBox {
+  padding: 0.6rem;
+  /* border:2px solid white; */
+  width: 50%;
+}
+
+.contentCon .infoBox .info {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #858589;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+footer .iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+footer .icon {
+  background: deepskyblue;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.smallBoxCon {
+  width: 100%;
+  position: fixed;
+  bottom:10%;
+  display: flex;
+  justify-content: center;
+}
+
+.smallBox {
+  height: 4.5rem;
+  width: 50%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+.smallBox .smallBoxVideo {
+  height: 95%;
+}
+
+.smallInfoBox {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.smallInfoBox .titlePara {
+  font-size: 0.9rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.smallInfoBox .chNamePara {
+  font-size: 0.7rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.smallToolBox {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.smallToolBox i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/*                               video css                           */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  object-fit: cover;
+  /* overflow: hidden; */
+}
+
+.container video {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+  position: relative;
+}
+
+.container .controlors {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  background: #00000091;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .controlors .topBar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.downbtn {
+  background: red;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+}
+
+.titleBox {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.titlePara {
+  width: 25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controlors .topBar .left {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.controlors .topBar .right {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controlors .middlebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.controlors .middlebar .tools {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: center;
+}
+
+.controlors .middlebar .tools i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: #3F3F419E;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.timePara {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.range-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.range-bar input[type="range"] {
+  width: 100%;
+  height: 0.2rem;
+  appearance: none;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.range-bar input[type="range"]::-webkit-slider-thumb {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  z-index: 1;
+}
+
+.range-bar .progress {
+  position: absolute;
+  height: 0.2rem;
+  background-color: red;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  z-index: 1;
+}
+
+.iconBox {
+  margin-top: 0.6rem;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.5rem;
+}
+
+.settingCon {
+
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.settingBox {
+  width: 25rem;
+  border-radius: 0.5rem;
+  background: #272729;
+  padding: 1rem;
+}
+
+.row {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .left i {
+  margin-right: 0.5rem;
+}
+
+.row .right {
+  font-size: 0.9rem;
+}
+
+.row .right i {
+  margin-left: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.container .controlors {
+  display: none;
+}
+
+#video {
+  display: none;
+}
+
+.smallBoxCon {
+  display: flex;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+}
