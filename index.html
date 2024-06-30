@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>YouTube</title>
+</head>
+
+<body>
+  <div class="body homePage">
+    <nav>
+      <div class="navBox">
+
+        <img src="/YouTube/images/logo.jpeg" alt="YouTube">
+        <div class="iconBox">
+          <i class="fa-solid fa-tv"></i>
+          <i style="font-size:1.08rem;" class="fa-regular fa-bell"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="bar">
+      <p>All</p>
+      <p>Shorts</p>
+      <p>Platlist</p>
+      <p>Trending</p>
+    </div>
+    <div class="contentCon"></div>
+    <div class="miniBox"></div>
+
+    <footer>
+      <div class="smallBoxCon">
+        <div class="smallBox">
+          <video class="smallBoxVideo" muted></video>
+          <div class="smallInfoBox">
+            <p class="titlePara">This is the title of the video</p>
+            <p class="chNamePara">Total Gaming</p>
+          </div>
+          <div class="smallToolBox">
+            <i class="fa-solid fa-pause btn playBtn2 playBtn"></i>
+            <i class="fa-solid fa-xmark btn"></i>
+          </div>
+        </div>
+      </div>
+      <div class="iconBox">
+        <img class="imgIcon" style="height:1.7rem;" src="/YouTube/images/home.jpeg">
+        <img class="imgIcon" style="height:2.1rem" src="/YouTube/images/shorts.jpeg">
+        <img class="imgIcon" style="height:2.5rem" src="/YouTube/images/plus.jpeg">
+        <img class="imgIcon" style="height:1.7rem" src="/YouTube/images/subscription.jpeg">
+        <p class="icon">S</p>
+      </div>
+    </footer>
+  </div>
+
+  <!--             video code           -->
+
+  <div class="container videoContainer">
+    <video class="video" id="video" muted></video>
+    <div class="controlors controlBox">
+      <div class="topBar">
+        <div class="left">
+          <i class="fa-solid fa-chevron-down downbtn btn"></i>
+          <span class="titleBox">
+            <div class="titlePara">
+              This is a long text that will be truncated with ellipses if it doesn't fit in the div.
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+        </div>
+        <div class="right">
+          <i class="fa-regular fa-closed-captioning btn"></i>
+          <i class="fa-solid fa-gear btn stngBtn"></i>
+        </div>
+      </div>
+      <div class="middlebar">
+        <div class="tools">
+          <i class="fa-solid fa-backward-step btn"></i>
+          <i class="fa-solid fa-rotate-left backward btn"></i>
+          <i style="font-size: 2rem;height:3.5rem;width:3.5rem;font-weight: thin;" class="fa-solid fa-pause playBtn playBtn1 btn"></i>
+          <i class="fa-solid fa-rotate-right forward btn"></i>
+          <i class="fa-solid fa-forward-step btn"></i>
+        </div>
+      </div>
+      <div class="bottomBar">
+        <div class="timBox">
+          <p class="timePara">00:00/00:00</p>
+        </div>
+        <div class="range-container btn">
+          <div class="range-bar">
+            <div class="progress btn" id="progress"></div>
+            <input type="range" id="rangeInput" value="0" class="btn">
+          </div>
+        </div>
+        <div class="iconBox">
+          <i style="font-size: 1.2rem" class="fa-regular fa-thumbs-up btn"></i>
+          <i style="font-size: 1.2rem" class="fa-regular fa-thumbs-down btn"></i>
+          <i class="fa-regular fa-message btn"></i>
+          <i class="fa-regular fa-bookmark btn"></i>
+          <i class="fa-solid fa-share btn"></i>
+          <i class="fa-solid fa-ellipsis btn"></i>
+        </div>
+      </div>
+    </div>
+    <div class="settingCon">
+      <div class="settingBox">
+        <div class="row">
+          <p class="left"><i class="fa-solid fa-sliders btn"></i>Quality</p>
+
+          <p class="right">Auto(360p)<i class="fa-solid fa-chevron-right btn"></i></p>
+        </div>
+        <div class="row">
+          <p class="left"><i class="fa-solid fa-arrows-rotate btn"></i>Playback speed</p>
+          <p class="right">Normal<i class="fa-solid fa-chevron-right btn"></i></p>
+        </div>
+        <div class="row">
+          <p class="left"><i class="fa-solid fa-closed-captioning btn"></i>Captions</p>
+          <p class="right">Off<i class="fa-solid fa-chevron-right btn"></i></p>
+        </div>
+        <div class="row">
+          <p class="left"><i class="fa-solid fa-lock btn"></i>Lock screen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/YouTube/data.js"></script>
+  <script src="/YouTube/script.js"></script>
+</body>
+
+</html>
