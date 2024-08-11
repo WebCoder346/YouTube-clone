@@ -2,20 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  color: white;
 }
 
 html,
 body {
   height: 100vh;
-  background: black;
+  width: 100vw;
+  background: #151515;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
 
+.navBody {
+  background: black;
+  height: 6rem;
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 3rem;
+  height: 6rem;
+  background: black;
 }
 
 nav .navBox {
@@ -43,7 +53,6 @@ nav .iconBox {
   display: flex;
   color: white;
   margin: 0.5rem 0;
-  margin-top: 3rem;
 }
 
 .bar p {
@@ -55,9 +64,9 @@ nav .iconBox {
 }
 
 .contentCon {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100vh;
+  height:70vh;
+  width:100%;
+  overflow: scroll;
   color: white;
 }
 
@@ -71,18 +80,12 @@ nav .iconBox {
   padding: 0.2rem;
 }
 
-.contentCon .videoBox:last-child {
-  margin-bottom: 10rem;
-
-}
-
 .contentCon .videoBox img {
   height: 100%;
 }
 
 .contentCon .infoBox {
   padding: 0.6rem;
-  /* border:2px solid white; */
   width: 50%;
 }
 
@@ -92,8 +95,13 @@ nav .iconBox {
   color: #858589;
 }
 
+.footerCon {
+  height: 10vh;
+  width: 100vw;
+}
 
 footer {
+  border-top: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -102,7 +110,7 @@ footer {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
 }
 
@@ -116,19 +124,34 @@ footer .iconBox {
 
 footer .icon {
   background: deepskyblue;
-  height: 25px;
-  width: 25px;
+  height: 28px;
+  width: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.shorts svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.fa-plus {
+  font-size: 1.5rem;
+  height: 2.6rem;
+  width: 2.6rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  padding: 6px 6px;
 }
 
 .smallBoxCon {
   width: 100%;
   position: fixed;
-  bottom:10%;
+  bottom: 10%;
   display: flex;
   justify-content: center;
 }
@@ -162,7 +185,6 @@ footer .icon {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 .smallInfoBox .chNamePara {
@@ -189,37 +211,26 @@ footer .icon {
 
 /*                               video css                           */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: white;
-}
 
-body {
-  background-color: black;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  object-fit: cover;
-  /* overflow: hidden; */
+.videoContainer {
+  overflow: hidden;
+  height:100vh;
+  width:100vw;
 }
 
 .container video {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
   position: relative;
   object-fit: cover;
-  position: relative;
+  overflow: hidden;
 }
 
 .container .controlors {
   position: absolute;
   top: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding: 1rem;
   background: #00000091;
   display: flex;
@@ -234,7 +245,7 @@ body {
 }
 
 .downbtn {
-  background: red;
+  background: #4F4F4F00;
   border-radius: 50%;
   height: 1rem;
   width: 1rem;
@@ -391,6 +402,56 @@ body {
   font-size: 0.8rem;
 }
 
+.popupBox {
+  /*   height: 2rem;
+width: 13rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: black;
+  background: #E8E8E9;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 40%;
+  opacity: 0;
+  /* display: none; */
+}
+
+.popupAnimation {
+  animation: popup 3s ease 1;
+}
+
+@keyframes popup {
+  0% {
+    /* display: flex; */
+    height: 2rem;
+    width: 13rem;
+    opacity: 0;
+  }
+
+  30% {
+    height: 2rem;
+    width: 13rem;
+    opacity: 1;
+  }
+
+
+  70% {
+    height: 2rem;
+    width: 13rem;
+    opacity: 0;
+    /* display: none; */
+  }
+
+  100% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+}
+
 .container .controlors {
   display: none;
 }
@@ -399,11 +460,54 @@ body {
   display: none;
 }
 
-.smallBoxCon {
-  display: flex;
-}
 
 .homePage {
   display: flex;
   flex-direction: column;
+}
+
+.smallBoxCon {
+  display: none;
+}
+
+.offlineBox {
+  height: 90%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+  text-align: center;
+  padding: 0.5rem;
+  background: #4F4F4F;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.loader {
+  height: 3rem;
+  width: 3rem;
+  border: 4px solid #9B9B9B;
+  border-radius: 50%;
+  margin-top: 2rem;
+  border-top: 4px solid #3D3D3F;
+  animation: loader 1.5s ease-in-out infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shorts {
+  height: 25px;
+  width: 25px;
 }
