@@ -11,55 +11,39 @@
 </head>
 
 <body>
+  <div class="offlineBox">
+    <p class="offlinePara">You are Offline...</p>
+    <div class="loader"></div>
+  </div>
   <div class="body homePage">
-    <nav>
-      <div class="navBox">
-
-        <img src="logo.jpeg" alt="YouTube">
-        <div class="iconBox">
-          <i class="fa-solid fa-tv"></i>
-          <i style="font-size:1.08rem;" class="fa-regular fa-bell"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="navBody">
+      <nav>
+        <div class="navBox">
+          <img src="logo.jpeg" alt="YouTube">
+          <div class="iconBox">
+            <i class="fa-solid fa-tv"></i>
+            <i style="font-size:1.08rem;" class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="bar">
-      <p>All</p>
-      <p>Shorts</p>
-      <p>Platlist</p>
-      <p>Trending</p>
+
+        <div class="bar">
+          <p>All</p>
+          <p>Shorts</p>
+          <p>Platlist</p>
+          <p>Trending</p>
+        </div>
+      </nav>
     </div>
     <div class="contentCon"></div>
     <div class="miniBox"></div>
 
-    <footer>
-      <div class="smallBoxCon">
-        <div class="smallBox">
-          <video class="smallBoxVideo" muted></video>
-          <div class="smallInfoBox">
-            <p class="titlePara">This is the title of the video</p>
-            <p class="chNamePara">Total Gaming</p>
-          </div>
-          <div class="smallToolBox">
-            <i class="fa-solid fa-pause btn playBtn2 playBtn"></i>
-            <i class="fa-solid fa-xmark btn"></i>
-          </div>
-        </div>
-      </div>
-      <div class="iconBox">
-        <img class="imgIcon" style="height:1.7rem;" src="home.jpeg">
-        <img class="imgIcon" style="height:2.1rem" src="shorts.jpeg">
-        <img class="imgIcon" style="height:2.5rem" src="plus.jpeg">
-        <img class="imgIcon" style="height:1.7rem" src="subscription.jpeg">
-        <p class="icon">S</p>
-      </div>
-    </footer>
   </div>
 
   <!--             video code           -->
 
-  <div class="container videoContainer">
-    <video class="video" id="video" muted></video>
+  <div class="container videoContainer videoCon">
+    <video class="video" id="video"></video>
     <div class="controlors controlBox">
       <div class="topBar">
         <div class="left">
@@ -96,12 +80,10 @@
           </div>
         </div>
         <div class="iconBox">
-          <i style="font-size: 1.2rem" class="fa-regular fa-thumbs-up btn"></i>
-          <i style="font-size: 1.2rem" class="fa-regular fa-thumbs-down btn"></i>
-          <i class="fa-regular fa-message btn"></i>
-          <i class="fa-regular fa-bookmark btn"></i>
-          <i class="fa-solid fa-share btn"></i>
-          <i class="fa-solid fa-ellipsis btn"></i>
+          <i style="font-size: 1.2rem" class="iconBoxBtn fa-regular fa-thumbs-up btn" text="Added to Like video"></i>
+          <i style="font-size: 1.2rem" class="iconBoxBtn fa-regular fa-thumbs-down btn" text="Remove from Like video"></i>
+          <i class="iconBoxBtn fa-regular fa-message btn" text="Comment is not available"></i>
+          <i class="iconBoxBtn fa-regular fa-bookmark btn" text="Added to Bookmark video"></i>
         </div>
       </div>
     </div>
@@ -125,11 +107,41 @@
         </div>
       </div>
     </div>
+    <div class="popupBox ">Added to Like video</div>
   </div>
+  
+  <!--                     Small Box                         -->
+  <div class="smallBoxCon">
+    <div class="smallBox">
+      <video class="smallBoxVideo" muted></video>
+      <div class="smallInfoBox">
+        <p class="titlePara">This is the title of the video</p>
+        <p class="chNamePara">Total Gaming</p>
+      </div>
+      <div class="smallToolBox">
+        <i class="fa-solid fa-pause btn playBtn2 playBtn"></i>
+        <i class="fa-solid fa-xmark btn removeSmallVideoBtn"></i>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footerCon">
+    <footer>
 
+      <div class="iconBox">
+        <i style="font-size:1.1rem" class="fa-solid fa-house imgIcon"></i>
+        <img class="imgIcon shorts" src="/YouTube/SVG/youtube-shorts-logo-15251 (2).svg"></img>
+        <i class="fa-solid fa-plus imgIcon"></i>
+        <i style="font-size:1.1rem" class="fa-solid fa-book-open"></i>
+        <p class="icon">S</p>
+      </div>
+    </footer>
+  </div>
 
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- <i class="fa-solid fa-thumbs-up"></i> -->
