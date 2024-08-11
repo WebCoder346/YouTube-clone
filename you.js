@@ -1,5 +1,5 @@
 document.querySelector("#box").addEventListener("click", () => {
-  window.location.href = "/YouTube/index.html";
+  window.location.href = "index.html";
 });
 let videoBoxes = [];
 // Making all videoBoxes
@@ -49,7 +49,7 @@ const videoBox = document.createElement('div');
 }
 videoBoxes.forEach((videoBox,index)=>{
   videoBox.addEventListener("click",()=>{
-    window.location.href = "/YouTube/index.html";
+    window.location.href = "index.html";
     console.log(homePage)
     let homePage = document.querySelector(".homePage")
     homePage.style.display = "none";
